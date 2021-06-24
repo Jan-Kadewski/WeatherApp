@@ -1,0 +1,23 @@
+.root{
+   -fx-background-image: url("/Assets/warm-bg.jpg");
+    -fx-background-repeat: no-repeat;
+    }
+.button{
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+    -fx-background-color: coral;
+    -fx-background-radius: 20;
+    -fx-translate-y: 100;
+    -fx-font-size: 20;
+    -fx-text-fill: whitesmoke;
+    -fx-font-weight: bold;
+}
+.button:hover{
+    -fx-scale-x: 1.1;
+    -fx-opacity: .8;
+    -fx-cursor: pointer;
+}
+.text-field{
+    -fx-max-width: 250;
+    -fx-translate-y: 30;
+}

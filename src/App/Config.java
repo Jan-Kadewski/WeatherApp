@@ -11,10 +11,24 @@ import java.time.Duration;
 public class Config {
     final String key;
     String city;
+    int currentTemp;
+    String country;
+
+
+    String testResponse;
+    int status;
 
     public Config() {
         key = "54a17707f7fdd825511a71a9d7d09620";
+        initData();
+    }
+
+    public void initData(){
         city = "";
+        testResponse = "";
+        currentTemp = 0;
+        country = "";
+
     }
 
     public void getDataFromWeatherApi() throws IOException, InterruptedException {
@@ -27,7 +41,10 @@ public class Config {
                 .uri(URI.create(API_URL))
                 .build();
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        status = response.statusCode();
+        
+        testResponse = response.body();
+
 
     }
 }

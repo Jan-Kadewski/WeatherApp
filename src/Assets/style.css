@@ -20,3 +20,14 @@
     -fx-max-width: 250;
     -fx-translate-y: 30;
 }
+#hyperlink{
+    -fx-text-fill: white;
+    -fx-font-size:16;
+}
+#labelError{
+    -fx-text-fill: darkred;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-translate-y: -400;
+    -fx-translate-x: -20;
+}
